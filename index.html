@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" />
-    <title>Konrad Woloszyn Website Portfolio</title>
+    <title>Konrad Woloszyn Portfolio</title>
+    <link rel="icon" href="images/K5.png" > 
+    
 </head>
+
 <body>
     <div id="footer">
         <div class="container">
@@ -12,7 +16,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,16 +30,58 @@
             </div>
         </div>
     </div>
-
     <div id="portfolio">
+        <div class="header-contents">
+            <h1><br><br><span>Portfolio</span></h1>
+        </div>
         <div class="container">
-            <div class="row">
+            <div class="row" onclick="godot()" onmouseover="godot_over()" onmouseout="godot_out()">
                 <div class="portfolio-col-1">
                     <img src="images/Cywilizacja1.png">
+                </div>
+                <div class="portfolio-col-2"><br>
+                    <h3 style="color: red;">(GitHub Link)</h3>
+                    <h1>Godot Gra Cywilizacja 2077</h1><br>
+                    <h2>Turowa gra strategiczna, tworzona w zespole 3-osobowym.</h2>
+                    <h2>Moim zadaniem było tworzenie mapy, modeli, klikania, zaznaczania, przycisków.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="portfolio-col-1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="portfolio-col-2"><br>
+                    <h1>Utwór na pianinie</h1><br>
+                    <h2>Dość długa animacja postaci grającej na pianinie, którą zrobiłem przez wakacje hobbystycznie oraz eksperymentalnie, trochę licząc że może stanie się popularna na youtube. Zyskałem dzięki niej doświadczenie filmowe i programistyczne (postać z błędami sama gra na pianinie, klawisze oraz kafelki wylatujące z nich są automatyczne).</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="portfolio-col-1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Cghst2Bv76M?si=_m3VUJdiRJhfzyQv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="portfolio-col-2"><br>
+                    <h1>Reklama gry mobilnej</h1><br>
+                    <h2>Dość długa animacja postaci grającej na pianinie, którą zrobiłem przez wakacje hobbystycznie oraz eksperymentalnie, trochę licząc że może stanie się popularna na youtube. Zyskałem dzięki niej doświadczenie filmowe i programistyczne (postać z błędami sama gra na pianinie, klawisze oraz kafelki wylatujące z nich są automatyczne).</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <div class="container">
+            <div class="header-contents">
+                <h1><br><br><span>Skills</span></h1>
+            </div>
+            <div class="row">
+                <div class="portfolio-col-1">
+                    <img src="images/godot.webp">
                 </div>
                 <div class="portfolio-col-2">
                     <h1>Projekt Gry Cywilizacja 2077</h1>
                 </div>
+            </div>
+            <div class="row">
                 <div class="portfolio-col-1">
                     <img src="images/Cywilizacja1.png">
                 </div>
@@ -44,6 +91,37 @@
             </div>
         </div>
     </div>
+    <div id="contact">
+        <div class="container">
+            <div class="header-contents">
+                <h1><br><br><span>Contact</span></h1>
+            </div>
+            
+        </div>
+    </div>
 
+
+
+    <script>
+        function godot(){
+            var url = "https://github.com/JanP1/ProjektInzynieriaOprogramowania";
+            window.location.href = url;
+            //window.open(url, "_blank");
+        }
+        function godot_over(){
+            document.body.style.cursor = 'pointer';
+            //window.open(url, "_blank");
+        }
+        function godot_out(){
+            document.body.style.cursor = 'default';
+            //window.open(url, "_blank");
+        }
+        function godot(){
+            var url = "https://github.com/JanP1/ProjektInzynieriaOprogramowania";
+            window.location.href = url;
+            //window.open(url, "_blank");
+        }
+    </script>
 </body>
+
 </html>
