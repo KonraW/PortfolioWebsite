@@ -137,18 +137,43 @@ nav ul li a:hover::after {
     border-radius: 15px;
 }
 
+.portfolio-col-2 {
+    flex-basis: 50%;
+}
+
+.row-skills {
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 20px;
+    /* background-color: #272727; */
+    border-radius: 15px;
+    transition: 0.2s;
+    /* box-shadow: 0 0 10px 2px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff; */
+}
+.column-skills {
+    /* display: flex; */
+    flex-basis: 3%;
+    text-align: center;
+    margin: 20px;
+    background-color: #272727;
+    border-radius: 15px;
+    transition: 0.2s;
+    box-shadow: 0 0 10px 2px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff;
+}
 .skills-col-1 {
-    margin: 10px;
-    flex-basis: 35%;
+    /* flex-basis: 3%; */
 }
 
 .skills-col-1 img {
+    margin: 10px;
     width: 300px;
     border-radius: 15px;
 }
 
-.portfolio-col-2 {
-    flex-basis: 50%;
+.skills-col-2 {
+    margin: 10px;
+    align-items: center;
 }
 
 .header-contents h1 {
