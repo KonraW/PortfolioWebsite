@@ -120,11 +120,11 @@ nav ul li a:hover::after {
     border-radius: 15px;
     z-index: -2;
     transition: 0.2s;
-    box-shadow: 0 0 10px 2px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff;
+    box-shadow: 0 0 10px 0px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff;
 }
 
 .row:hover {
-    box-shadow: 0 0 15px 2px #3cff00, 0 0 100px -20px #003cff;
+    box-shadow: 0 0 15px 5px #3cff00, 0 0 100px -20px #003cff;
 }
 
 .portfolio-col-1 {
