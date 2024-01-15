@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: #1d1d1d;
+    background: #000000;
     color: #fff;
 }
 
@@ -29,6 +29,8 @@ body {
     transition: 0.6s;
     padding: 10px 100px;
     z-index: 10;
+    box-shadow: 0 0 10px 2px #060057, 0 0 30px -20px #0011ff;
+    border-radius: 15px;
 }
 
 #header {
@@ -99,23 +101,30 @@ nav ul li a:hover::after {
 }
 
 /* portfolio */
-#portfolio {
-    padding: 20px 0;
+#portfolio,#skills {
+    padding: 20px 20px;
+    margin-top: 30px;
     color: #ffffff;
+    background-image:  linear-gradient(rgba(29, 29, 29, 0.671), rgba(12, 12, 12, 0.904)),url(images/back2.jpg);
+    background-size:cover;
+    border-radius: 60px;
+    box-shadow: 0 0 10px 2px #0c00bb, 0 0 100px -20px #0011ff;
 }
 
 .row {
     margin: 20px;
-    background-color: #1d1d1d;
+    background-color: #272727;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 15px;
     z-index: -2;
+    transition: 0.2s;
+    box-shadow: 0 0 10px 2px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff;
 }
 
 .row:hover {
-    box-shadow: 0 0 10px 2px #3cff00, 0 0 100px -20px #0011ff
+    box-shadow: 0 0 15px 2px #3cff00, 0 0 100px -20px #003cff;
 }
 
 .portfolio-col-1 {
@@ -128,6 +137,16 @@ nav ul li a:hover::after {
     border-radius: 15px;
 }
 
+.skills-col-1 {
+    margin: 10px;
+    flex-basis: 35%;
+}
+
+.skills-col-1 img {
+    width: 300px;
+    border-radius: 15px;
+}
+
 .portfolio-col-2 {
     flex-basis: 50%;
 }
@@ -135,9 +154,10 @@ nav ul li a:hover::after {
 .header-contents h1 {
     font-size: 60px;
     /* margin-top: 20px; */
-    padding: 20px 10%;
+    padding: 0px 10%;
 }
 
 .header-contents h1 span {
+    margin-left: 100px;
     color: #3cff00;
 }
