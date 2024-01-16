@@ -18,6 +18,7 @@ body {
 }
 
 #footer {
+    font-family: 'Wrong Delivery', sans-serif;
     background-color: #333;
     position: fixed;
     top: 0;
@@ -29,12 +30,12 @@ body {
     transition: 0.6s;
     padding: 10px 100px;
     z-index: 10;
-    box-shadow: 0 0 10px 2px #060057, 0 0 30px -20px #0011ff;
+    box-shadow: 0 0 10px 2px #570044, 0 0 30px -20px #ff00aa;
     /* border-radius: 15px; */
 }
 
 #header {
-    font-family: 'Future Earth';
+    font-family: 'Wrong Delivery';
     width: 100%;
     height: 70vh;
     background-image: url(index.html);
@@ -69,14 +70,14 @@ nav ul li a {
 }
 
 nav ul li a:active {
-    color: #3cff00;
+    color: #ff5ebc;
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #3cff00;
+    background: #00ffff;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -104,37 +105,47 @@ nav ul li a:hover::after {
 /* portfolio */
 #portfolio,#skills {
     padding: 20px 20px;
-    margin-top: 30px;
+    margin-top: 100px;
     color: #ffffff;
-    background-image:  linear-gradient(rgba(29, 29, 29, 0.308), rgba(12, 12, 12, 0.349)),url(images/back3.jpg);
     /* background-image:  linear-gradient(rgba(29, 29, 29, 0.671), rgba(12, 12, 12, 0.904)),url(images/back3.jpg); */
-    background-size:cover;
+    background-size:auto;
     /* border-radius: 60px; */
-    box-shadow: 0 0 10px 2px #0c00bb, 0 0 100px -20px #0011ff;
+    box-shadow: 0 0 10px 2px #00a5bb, 0 0 100px -20px #ff00b3;
+}
+#portfolio{
+    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back3.jpg);
+
+}
+#skills{
+    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back5.jpg);
+
 }
 
 .row {
     font-family: sans-serif;
     margin: 20px;
-    background-color: #272727;
+    background-color: #27272786;
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-radius: 15px;
-    transition: 0.2s;
-    width:100%;
-    height: 100%;
-    box-shadow: 0 0 10px 0px rgba(255, 0, 157, 0.795), 0 0 50px -20px #00aeff;
+    /* border-radius: 15px; */
+    transition: 0.4s;
+    padding: 0px 0px;
+    
+    box-shadow: 0 -2px 10px 0px rgba(255, 0, 157, 0.795), 0px 2px 5px 0px #00aeff;
 }
 
 .row:hover {
-    box-shadow: 0 0 15px 5px #ff009d, 0 0 100px -20px #00c3ff;
-    height:103%;
+    background-color: rgba(20, 71, 71, 0.815);
+    box-shadow: -5px -5px 5px 5px #ff009dab, 5px 5px 5px 5px #00f7ffa9;
+    /* height:103%; */
+    padding: 2px 2px;
+    margin: 10px;
 }
 
 .portfolio-col-1 {
     margin: 10px;
-    flex-basis: 10%;
+    flex-basis: 100%;
 }
 
 .portfolio-col-1 img {
@@ -144,7 +155,6 @@ nav ul li a:hover::after {
 
 .portfolio-col-2 {
     margin: 20px;
-    flex-basis: 80%;
 }
 
 .row-skills {
@@ -158,26 +168,31 @@ nav ul li a:hover::after {
     /* box-shadow: 0 0 10px 2px rgba(60, 255, 0, 0.795), 0 0 50px -20px #0011ff; */
 }
 .column-skills {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     flex-basis: 3%;
     text-align: center;
     margin: 20px;
     background-color: #272727;
     border-radius: 15px;
     transition: 0.2s;
-    box-shadow: 0 0 10px 2px rgba(255, 0, 170, 0.795), 0 0 50px -20px #0084ff;
+    box-shadow: 0 0 10px 2px rgba(255, 0, 170, 0.795), 0 0 50px -20px #ff0040;
 }
 .skills-col-1 {
     /* flex-basis: 3%; */
 }
 
-.skills-col-1 img {
-    margin: 10px;
+.skills-col-1 div {
     width: 300px;
+    margin: 10px;
     border-radius: 15px;
 }
 
+.skills-col-1 div img {
+}
 .skills-col-2 {
+    font-family: sans-serif;
+    align-self: center;
     margin: 10px;
     align-items: center;
 }

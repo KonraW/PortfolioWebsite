@@ -26,8 +26,8 @@
     <div id="header">
         <div class="container">
             <div class="header-text">
-                <p>Programmer</p>
-                <h1>Hi, I'm <span>Konrad</span></h1>
+                <p>PROGRAMMER</p>
+                <h1>HI, I'M <span>KONRAD</span></h1>
             </div>
         </div>
     </div>
@@ -46,8 +46,8 @@
         <div class="container">
             <div class="row" onclick="godot()" onmouseover="godot_over()" onmouseout="godot_out()">
                 <div class="portfolio-col-2">
-                    <h3 style="color: red;display: inline;">GitHub Link </h3>
-                    <h2 style="color: rgb(120, 129, 255);display: inline;"> &nbsp;W trakcie</h2><br><br>
+                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2>
+                    <h2 style="color: rgb(32, 184, 189);display: inline;"> &nbsp;W trakcie</h2><br><br>
                     <h1>Godot Gra Cywilizacja 2077</h1><br>
                     <h2>Turowa gra strategiczna, tworzona w zespole 3-osobowym.</h2>
                     <h2>W tym projekcie stworzyłem mapy, modele, klikanie, zaznaczanie, obsługę przycisków.</h2>
@@ -58,18 +58,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="portfolio-col-1">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
                 <div class="portfolio-col-2"><br>
                     <h1>Pianistka</h1><br>
                     <h2>Dość długa animacja postaci grającej na pianinie, którą zrobiłem przez wakacje hobbystycznie
                         oraz eksperymentalnie, trochę licząc że może stanie się popularna na youtube. Zyskałem dzięki
                         niej doświadczenie filmowe i programistyczne (postać z błędami sama gra na pianinie, klawisze
                         oraz kafelki wylatujące z nich są automatyczne).</h2>
+                </div>
+                <div class="portfolio-col-1">
+                    <iframe style="box-shadow: -1px -1px 5px 1px #ff009dab, 1px 1px 5px 1px #00c3ffa9;" width="560" height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -97,11 +97,11 @@
                 <h1><br><br><span>
                     <p >Skills</p>Skills</span></h1>
             </div>
-            <div class="row-skills">
+            <div class="row-skills" >
                 <div class="column-skills">
 
-                    <div class="skills-col-1">
-                        <img src="images/godot.webp">
+                    <div class="skills-col-1"><div>
+                        <img width="300" src="images/godot.webp"></div>
                     </div>
                     <div class="skills-col-2">
                         <h1>GDScript</h1><br>
@@ -109,11 +109,11 @@
                 </div>
                 <div class="column-skills">
                     
-                    <div class="skills-col-1">
-                        <img src="images/Cywilizacja1.png">
+                    <div class="skills-col-1"><div><br><br>
+                        <img width="100" src="images/Python.png"></div>
                     </div>
                     <div class="skills-col-2">
-                        <h1>Projekt Gry Cywilizacja 2077</h1><br>
+                        <h1>Python</h1><br>
                     </div>
                 </div>
             </div>
@@ -197,6 +197,89 @@
             window.location.href = url;
             //window.open(url, "_blank");
         }
+
+
+
+        let hoveredElement = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.scroll-container');
+  // You can pass a scrolling container or `document` here:
+  addHoverListeners(scrollContainer, hover);
+});
+
+function hover(targetElement) {
+  if (hoveredElement === targetElement) {
+    return;
+  }
+  
+  if (hoveredElement) {
+    hoveredElement.classList.remove('hover');
+  }
+  
+  hoveredElement = targetElement;
+  hoveredElement.classList.add('hover');
+}
+
+/**
+ * Attaches the necessary event listeners for hovering.
+ *
+ * @param {EventTarget} scrollContainer The `Element` or `document`
+ * whose scroll events should be listened to.
+ * @param {EventListener|Function} hover A callback function or an
+ * object that implements `EventListener`
+ */
+function addHoverListeners(scrollContainer, hover) {
+  let mouseX, mouseY;
+  
+  document.addEventListener('mousemove', event => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    
+    hover(event.target);
+  }, { passive: true });
+  
+  scrollContainer.addEventListener('scroll', debounce(() => {
+    const hoverTarget = document.elementFromPoint(mouseX, mouseY);
+    if (hoverTarget) {
+      hover(hoverTarget);
+    }
+  }, 25), { passive: true });
+}
+
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not
+ * be triggered. The function will be called after it stops being called for
+ * N milliseconds. If `immediate` is passed, trigger the function on the
+ * leading edge, instead of the trailing.
+ *
+ * @see https://davidwalsh.name/javascript-debounce-function
+ * @param {Function} func
+ * @param {Number} wait
+ * @param {Boolean?} immediate
+ * @returns {Function}
+ */
+function debounce(func, wait, immediate = false) {
+  let timeout;
+
+  return function () {
+    const context = this, args = arguments;
+    const later = function () {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      }
+    };
+
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+
+    if (callNow) {
+      func.apply(context, args);
+    }
+  };
+};
     </script>
 </body>
 
