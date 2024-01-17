@@ -24,11 +24,25 @@
         </div>
     </div>
     <div id="header">
+        <video id="video1" class="video-slider active" src="images/filmik2.mov" autoplay muted loop></video>
+        <video id="video2" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+        <video id="video3" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+        <video id="video4" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+        <video id="video5" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+        
+
         <div class="container">
             <div class="header-text">
                 <p>PROGRAMMER</p>
                 <h1>HI, I'M <span>KONRAD</span></h1>
             </div>
+        </div><br><br><br><br><br><br><br><br><br>
+        <div class="slider-navigation">
+            <div id="nav-btn1" class="nav-btn active"></div>
+            <div id="nav-btn2" class="nav-btn"></div>
+            <div id="nav-btn3" class="nav-btn"></div>
+            <div id="nav-btn4" class="nav-btn"></div>
+            <div id="nav-btn5" class="nav-btn"></div>
         </div>
     </div>
     <div id="header2">
@@ -41,7 +55,8 @@
     <div id="portfolio">
         <div class="header-contents">
             <h1><br><br><span>Portfolio
-                <p >Portfolio</p></span></h1>
+                    <p>Portfolio</p>
+                </span></h1>
         </div>
         <div class="container">
             <div class="row" onclick="godot()" onmouseover="godot_over()" onmouseout="godot_out()">
@@ -66,7 +81,8 @@
                         oraz kafelki wylatujące z nich są automatyczne).</h2>
                 </div>
                 <div class="portfolio-col-1">
-                    <iframe style="box-shadow: -1px -1px 5px 1px #ff009dab, 1px 1px 5px 1px #00c3ffa9;" width="560" height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3"
+                    <iframe style="box-shadow: -1px -1px 5px 1px #ff009dab, 1px 1px 5px 1px #00c3ffa9;" width="560"
+                        height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -95,22 +111,27 @@
         <div class="container">
             <div class="header-contents">
                 <h1><br><br><span>
-                    <p >Skills</p>Skills</span></h1>
+                        <p>Skills</p>Skills
+                    </span></h1>
             </div>
-            <div class="row-skills" >
+            <div class="row-skills">
                 <div class="column-skills">
 
-                    <div class="skills-col-1"><div>
-                        <img width="300" src="images/godot.webp"></div>
+                    <div class="skills-col-1">
+                        <div>
+                            <img width="300" src="images/godot.webp">
+                        </div>
                     </div>
                     <div class="skills-col-2">
                         <h1>GDScript</h1><br>
                     </div>
                 </div>
                 <div class="column-skills">
-                    
-                    <div class="skills-col-1"><div><br><br>
-                        <img width="100" src="images/Python.png"></div>
+
+                    <div class="skills-col-1">
+                        <div><br><br>
+                            <img width="100" src="images/Python.png">
+                        </div>
                     </div>
                     <div class="skills-col-2">
                         <h1>Python</h1><br>
@@ -119,7 +140,7 @@
             </div>
         </div>
         <div class="row-skills">
-            
+
             <div class="skills-col-1">
                 <img src="images/Cywilizacja1.png">
             </div>
@@ -145,7 +166,7 @@
                     </div>
                 </div>
                 <div class="column-skills">
-                    
+
                     <div class="skills-col-1">
                         <img src="images/Cywilizacja1.png">
                     </div>
@@ -156,7 +177,7 @@
             </div>
         </div>
         <div class="row-skills">
-            
+
             <div class="skills-col-1">
                 <img src="images/Cywilizacja1.png">
             </div>
@@ -179,6 +200,7 @@
 
 
     <script>
+//Links
         function godot() {
             var url = "https://github.com/JanP1/ProjektInzynieriaOprogramowania";
             window.location.href = url;
@@ -198,88 +220,141 @@
             //window.open(url, "_blank");
         }
 
+//Slider-video
+        const btns=document.querySelectorAll(".nav-btn")
+        const slides=document.querySelectorAll(".video-slider")
 
+        var sliderNav=function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove('active')
+            })
+            slides.forEach((slide)=>{
+                slide.classList.remove('active')
+            })
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+        var time=4000
+        let interval
+        interval=setInterval(sliding, time);
+        let interval2
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                sliderNav(i)
+                // clearInterval(interval);
+                // interval=setInterval(sliding, time);
+                clearInterval(interval);
+                // clearInterval(interval2);
+                interval2=setTimeout(function(){
+                    // clearInterval(interval);
+                    interval=setInterval(sliding, time);
+                }, 10000);
 
+            });
+        });
+//Auto Slider-video
+        function sliding(){
+            var count=0;
+            var count_active=0;
+            btns.forEach((btn)=>{
+                count+=1;
+                if (btn.classList.contains('active')){
+                    btn.classList.remove('active')
+                    document.getElementById('video'+count).classList.remove('active')
+                    count_active=count
+                }
+            })
+            if (count_active>4){
+                count_active=0
+            }
+            
+            document.getElementById('video'+(count_active+1)).classList.add('active')
+            document.getElementById('nav-btn'+(count_active+1)).classList.add('active')
+            console.log(count)
+            time=1000
+        }
+
+//Backlight after scrolling
         let hoveredElement = null;
 
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollContainer = document.querySelector('.scroll-container');
-  // You can pass a scrolling container or `document` here:
-  addHoverListeners(scrollContainer, hover);
-});
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollContainer = document.querySelector('.scroll-container');
+            // You can pass a scrolling container or `document` here:
+            addHoverListeners(scrollContainer, hover);
+        });
 
-function hover(targetElement) {
-  if (hoveredElement === targetElement) {
-    return;
-  }
-  
-  if (hoveredElement) {
-    hoveredElement.classList.remove('hover');
-  }
-  
-  hoveredElement = targetElement;
-  hoveredElement.classList.add('hover');
-}
+        function hover(targetElement) {
+            if (hoveredElement === targetElement) {
+                return;
+            }
 
-/**
- * Attaches the necessary event listeners for hovering.
- *
- * @param {EventTarget} scrollContainer The `Element` or `document`
- * whose scroll events should be listened to.
- * @param {EventListener|Function} hover A callback function or an
- * object that implements `EventListener`
- */
-function addHoverListeners(scrollContainer, hover) {
-  let mouseX, mouseY;
-  
-  document.addEventListener('mousemove', event => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    
-    hover(event.target);
-  }, { passive: true });
-  
-  scrollContainer.addEventListener('scroll', debounce(() => {
-    const hoverTarget = document.elementFromPoint(mouseX, mouseY);
-    if (hoverTarget) {
-      hover(hoverTarget);
-    }
-  }, 25), { passive: true });
-}
+            if (hoveredElement) {
+                hoveredElement.classList.remove('hover');
+            }
 
-/**
- * Returns a function, that, as long as it continues to be invoked, will not
- * be triggered. The function will be called after it stops being called for
- * N milliseconds. If `immediate` is passed, trigger the function on the
- * leading edge, instead of the trailing.
- *
- * @see https://davidwalsh.name/javascript-debounce-function
- * @param {Function} func
- * @param {Number} wait
- * @param {Boolean?} immediate
- * @returns {Function}
- */
-function debounce(func, wait, immediate = false) {
-  let timeout;
+            hoveredElement = targetElement;
+            hoveredElement.classList.add('hover');
+        }
 
-  return function () {
-    const context = this, args = arguments;
-    const later = function () {
-      timeout = null;
-      if (!immediate) {
-        func.apply(context, args);
-      }
-    };
+        /**
+         * Attaches the necessary event listeners for hovering.
+         *
+         * @param {EventTarget} scrollContainer The `Element` or `document`
+         * whose scroll events should be listened to.
+         * @param {EventListener|Function} hover A callback function or an
+         * object that implements `EventListener`
+         */
+        function addHoverListeners(scrollContainer, hover) {
+            let mouseX, mouseY;
 
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
+            document.addEventListener('mousemove', event => {
+                mouseX = event.clientX;
+                mouseY = event.clientY;
 
-    if (callNow) {
-      func.apply(context, args);
-    }
-  };
-};
+                hover(event.target);
+            }, { passive: true });
+
+            scrollContainer.addEventListener('scroll', debounce(() => {
+                const hoverTarget = document.elementFromPoint(mouseX, mouseY);
+                if (hoverTarget) {
+                    hover(hoverTarget);
+                }
+            }, 25), { passive: true });
+        }
+
+        /**
+         * Returns a function, that, as long as it continues to be invoked, will not
+         * be triggered. The function will be called after it stops being called for
+         * N milliseconds. If `immediate` is passed, trigger the function on the
+         * leading edge, instead of the trailing.
+         *
+         * @see https://davidwalsh.name/javascript-debounce-function
+         * @param {Function} func
+         * @param {Number} wait
+         * @param {Boolean?} immediate
+         * @returns {Function}
+         */
+        function debounce(func, wait, immediate = false) {
+            let timeout;
+
+            return function () {
+                const context = this, args = arguments;
+                const later = function () {
+                    timeout = null;
+                    if (!immediate) {
+                        func.apply(context, args);
+                    }
+                };
+
+                const callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+
+                if (callNow) {
+                    func.apply(context, args);
+                }
+            };
+        };
     </script>
 </body>
 
