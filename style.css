@@ -169,13 +169,16 @@ nav ul li a:hover::after {
     background-size:auto;
     /* border-radius: 60px; */
     box-shadow: 0 0 10px 2px #00a5bb, 0 0 100px -20px #ff00b3;
+    /* position: relative; */
+    /* height: 1080px;
+    width: 1920px; */
 }
 #portfolio{
-    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back3.jpg);
+    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back3_blur.png);
 
 }
 #skills{
-    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back5.jpg);
+    background-image:  linear-gradient(rgba(29, 29, 29, 0.250), rgba(12, 12, 12, 0.250)),url(images/back5_blur.png);
 
 }
 
