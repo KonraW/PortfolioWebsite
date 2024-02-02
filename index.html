@@ -59,26 +59,45 @@
                 </span></h1>
         </div>
         <div class="container">
+            <div class="row" onclick="bazaFilmow()" onmouseover="godot_over()" onmouseout="godot_out()">
+                <div class="portfolio-col-2">
+                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2><br><br>
+                    <h1>Film Base</h1><br>
+                    <h2>Project created in C# in the MVVM architecture. The database of films is imported into the application, and then the user can filter the displayed elements by genre, title, etc. Additionally, he can give his own rating and mark the viewing, which is saved directly to the database.</h2>
+                </div>
+                <div class="portfolio-col-1">
+                    <img src="images/bazaFilmow.png">
+                </div>
+            </div>
+            <div class="row" onclick="quiz()" onmouseover="godot_over()" onmouseout="godot_out()">
+                <div class="portfolio-col-2">
+                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2><br><br>
+                    <h1>Quiz</h1><br>
+                    <h2>Project created in C# in the MVVM architecture. The coded database of questions and correct answers is imported into the application. Then the user can choose from the list which quiz he or she wants to solve. When he presses start, time starts to fly and the user has to select the correct answers. At the end, the result achieved by the user appears.</h2>
+                </div>
+                <div class="portfolio-col-1">
+                    <img src="images/quiz.png">
+                </div>
+            </div>
             <div class="row" onclick="godot()" onmouseover="godot_over()" onmouseout="godot_out()">
                 <div class="portfolio-col-2">
                     <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2>
-                    <h2 style="color: rgb(32, 184, 189);display: inline;"> &nbsp;W trakcie</h2><br><br>
+                    <!-- <h2 style="color: rgb(32, 184, 189);display: inline;"> &nbsp;W trakcie</h2> --><br><br>
                     <h1>Game Civilization 2077</h1><br>
-                    <h2>Turowa gra strategiczna, tworzona w zespole 2-osobowym. W 75% stworzona przeze mnie.</h2>
-                    <h2>W tym projekcie stworzyłem mapy, modele, klikanie, zaznaczanie, obsługę przycisków.</h2>
-                    <h2>Aktualnie tworzę ruch postaci, system walki.</h2>
+                    <h2>A turn-based strategy game, created by a 3-person team. Created using GDScript in the Godot as a school project.
+                        The player builds special buildings on a hexagonal board and recruits robots.
+                        Enemy buildings are scattered around him and enemy units come out of them.
+                        Robots can fight each other and destroy buildings. When one of the capitals falls, the game ends.</h2>
                 </div>
                 <div class="portfolio-col-1">
-                    <img src="images/Cywilizacja1.png">
+                    <img src="images/cywilizacja2.png">
                 </div>
             </div>
             <div class="row">
                 <div class="portfolio-col-2"><br>
-                    <h1>Pianistka</h1><br>
-                    <h2>Dość długa animacja postaci grającej na pianinie, którą zrobiłem przez wakacje hobbystycznie
-                        oraz eksperymentalnie, trochę licząc że może stanie się popularna na youtube. Zyskałem dzięki
-                        niej doświadczenie filmowe i programistyczne (postać z błędami sama gra na pianinie, klawisze
-                        oraz kafelki wylatujące z nich są automatyczne).</h2>
+                    <h1>Piano Player</h1><br>
+                    <h2>A rather long animation of a character playing the piano, which I made over the holidays as a hobby and experimentally.
+                        Thanks to this animation, I gained film and programming experience (the character with errors plays the piano himself. The keys and the tiles flying out of them are automatic).</h2>
                 </div>
                 <div class="portfolio-col-1">
                     <iframe style="box-shadow: -1px -1px 5px 1px #ff009dab, 1px 1px 5px 1px #00c3ffa9;" width="560"
@@ -90,18 +109,17 @@
             </div>
 
             <div class="row">
+                <div class="portfolio-col-2"><br>
+                    <h1>Game Advertisment</h1><br>
+                    <h2>The first animation of this type on my part, so it has not been refined.
+                        Here, first of all, I wanted to present the possibilities at my disposal (procedural hourglass, disintegrating and flying cards, animation of points).
+                        I generated the background and a few cards using AI for illustration purposes only.</h2>
+                </div>
                 <div class="portfolio-col-1">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Cghst2Bv76M?si=_m3VUJdiRJhfzyQv"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
-                </div>
-                <div class="portfolio-col-2"><br>
-                    <h1>Reklama gry mobilnej</h1><br>
-                    <h2>Pierwsza tego typu animacja z mojej strony, dlatego nie została dopracowana. Tutaj przede
-                        wszystkim chciałem zaprezentować możliwości jakimi dysponuję (proceduralna klepsydra, rozpadanie
-                        się i przelatywanie kart, animacja zdobywanych punktów). Tło oraz parę kart wygenerowałem z
-                        pomocą AI poglądowo.</h2>
                 </div>
             </div>
         </div>
@@ -195,6 +213,16 @@
             window.location.href = url;
             //window.open(url, "_blank");
         }
+        function bazaFilmow() {
+            var url = "https://github.com/Konrad6666/ProjektBazaFilmow";
+            window.location.href = url;
+            //window.open(url, "_blank");
+        }
+        function quiz() {
+            var url = "https://github.com/Konrad6666/QuizSolving";
+            window.location.href = url;
+            //window.open(url, "_blank");
+        }
         function godot_over() {
             document.body.style.cursor = 'pointer';
             //window.open(url, "_blank");
@@ -223,7 +251,7 @@
             btns[manual].classList.add("active");
             slides[manual].classList.add("active");
         }
-        var time=4000
+        var time=30000
         let interval
         interval=setInterval(sliding, time);
         let interval2
