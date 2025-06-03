@@ -1,381 +1,194 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konrad Woloszyn Portfolio</title>
     <link rel="icon" href="images/K5.png">
-
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id="footer">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#familiar">Familiar</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+<header id="footer">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <div id="header">
-        <video id="video1" class="video-slider active" src="images/filmik2.mov" autoplay muted loop></video>
-        <!-- <script>
-            var video=document.getElementById("video1");
-            video.volume=0.05;
-        </script> -->
-        <!-- <video id="video2" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
-        <video id="video3" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
-        <video id="video4" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
-        <video id="video5" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video> -->
-        
+</header>
 
-        <div class="container">
-            <div class="header-text">
-                <p>Game developer</p>
-                <h1>HI, I'M <span>KONRAD</span></h1>
-            </div>
-        </div><br><br><br><br><br><br><br><br><br>
-        <div class="slider-navigation">
-            <div id="nav-btn1" class="nav-btn active"></div>
-            <div id="nav-btn2" class="nav-btn"></div>
-            <div id="nav-btn3" class="nav-btn"></div>
-            <div id="nav-btn4" class="nav-btn"></div>
-            <div id="nav-btn5" class="nav-btn"></div>
-        </div>
-    </div>
-    <div id="header2">
-        <div class="container">
-            <div class="header-text">
-                <p>Student Politechniki Slaskiej</p>
-            </div>
-        </div>
-    </div>
-    <div id="portfolio">
-        <div class="header-contents">
-            <h1><br><br><span>Portfolio
-                    <p>Portfolio</p>
-                </span></h1>
-        </div>
-        <div class="container">
-            <div class="row" onclick="bazaFilmow()" onmouseover="godot_over()" onmouseout="godot_out()">
-                <div class="portfolio-col-2">
-                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2><br><br>
-                    <h1>Film Base</h1><br>
-                    <h2>Project created in C# in the MVVM architecture. The database of films is imported into the application, and then the user can filter the displayed elements by genre, title, etc. Additionally, he can give his own rating and mark the viewing, which is saved directly to the database.</h2>
-                </div>
-                <div class="portfolio-col-1">
-                    <img src="images/bazaFilmow.png">
-                </div>
-            </div>
-            <div class="row" onclick="quiz()" onmouseover="godot_over()" onmouseout="godot_out()">
-                <div class="portfolio-col-2">
-                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2><br><br>
-                    <h1>Quiz</h1><br>
-                    <h2>Project created in C# in the MVVM architecture. The coded database of questions and correct answers is imported into the application. Then the user can choose from the list which quiz he or she wants to solve. When he presses start, time starts to fly and the user has to select the correct answers. At the end, the result achieved by the user appears.</h2>
-                </div>
-                <div class="portfolio-col-1">
-                    <img src="images/quiz.png">
-                </div>
-            </div>
-            <div class="row" onclick="godot()" onmouseover="godot_over()" onmouseout="godot_out()">
-                <div class="portfolio-col-2">
-                    <h2 style="color: rgb(255, 0, 149);display: inline;">GitHub Link </h2>
-                    <!-- <h2 style="color: rgb(32, 184, 189);display: inline;"> &nbsp;W trakcie</h2> --><br><br>
-                    <h1>Game Civilization 2077</h1><br>
-                    <h2>A turn-based strategy game, created by a 3-person team. Created using GDScript in the Godot as a school project.
-                        The player builds special buildings on a hexagonal board and recruits robots.
-                        Enemy buildings are scattered around him and enemy units come out of them.
-                        Robots can fight each other and destroy buildings. When one of the capitals falls, the game ends.</h2>
-                </div>
-                <div class="portfolio-col-1">
-                    <img src="images/cywilizacja2.png">
-                </div>
-            </div>
-            <div class="row">
-                <div class="portfolio-col-2"><br>
-                    <h1>Piano Player</h1><br>
-                    <h2>A rather long animation of a character playing the piano, which I made over the holidays as a hobby and experimentally.
-                        Thanks to this animation, I gained film and programming experience (the character with errors plays the piano himself. The keys and the tiles flying out of them are automatic).</h2>
-                </div>
-                <div class="portfolio-col-1">
-                    <iframe style="box-shadow: -1px -1px 5px 1px #ff009dab, 1px 1px 5px 1px #00c3ffa9;" width="560"
-                        height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
+<section id="header">
+    <video id="video1" class="video-slider active" src="images/filmik2.mov" autoplay muted loop></video>
+    <video id="video2" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+    <video id="video3" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+    <video id="video4" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
+    <video id="video5" class="video-slider" src="images/filmik2.mov" autoplay muted loop></video>
 
-            <div class="row">
-                <div class="portfolio-col-2"><br>
-                    <h1>Game Advertisment</h1><br>
-                    <h2>The first animation of this type on my part, so it has not been refined.
-                        Here, first of all, I wanted to present the possibilities at my disposal (procedural hourglass, disintegrating and flying cards, animation of points).
-                        I generated the background and a few cards using AI for illustration purposes only.</h2>
-                </div>
-                <div class="portfolio-col-1">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Cghst2Bv76M?si=_m3VUJdiRJhfzyQv"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="skills">
-        <div class="container">
-            <div class="header-contents">
-                <h1><br><br><span>
-                        <p>Skills</p>Skills
-                    </span></h1>
-            </div>
-            <div class="row-skills">
-                <div class="column-skills">
-
-                    <div class="skills-col-1">
-                        <div><br>
-                            <img width="250" src="images/godot.webp">
-                        </div>
-                    </div>
-                    <div class="skills-col-2">
-                        <h1>GDScript</h1><br>
-                    </div>
-                </div>
-                <div class="column-skills">
-
-                    <div class="skills-col-1">
-                        <div><br><br>
-                            <img width="100" src="images/Python.png">
-                        </div>
-                    </div>
-                    <div class="skills-col-2">
-                        <h1>Python</h1><br>
-                    </div>
-                </div>
-                
-                <div class="column-skills">
-
-                    <div class="skills-col-1">
-                        <div><br><br>
-                            <img width="100" src="images/Android.png">
-                        </div>
-                    </div><br>
-                    <div class="skills-col-2">
-                        <h1>Kotlin</h1><br>
-                    </div>
-                </div>
-                <div class="column-skills">
-
-                    <div class="skills-col-1">
-                        <div><br><br>
-                            <img width="250" src="images/unity.png">
-                        </div>
-                    </div><br><br>
-                    <div class="skills-col-2">
-                        <h1>C#</h1><br>
-                    </div>
-                </div>
-                <div class="column-skills">
-
-                    <div class="skills-col-1">
-                        <div><br><br>
-                            <img width="140" src="images/Blender.png">
-                        </div>
-                    </div><br>
-                    <div class="skills-col-2">
-                        <h1>Blender</h1><br>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="header-text">
+        <p>Game developer</p>
+        <h1>Hi, I'm <span>Konrad</span></h1>
+        <p class="sub">Student Politechniki Śląskiej</p>
     </div>
 
 
+    <div class="slider-navigation">
+        <div id="nav-btn1" class="nav-btn active"></div>
+        <div id="nav-btn2" class="nav-btn"></div>
+        <div id="nav-btn3" class="nav-btn"></div>
+        <div id="nav-btn4" class="nav-btn"></div>
+        <div id="nav-btn5" class="nav-btn"></div>
     </div>
-    <div id="contact">
-        <div class="container">
-            <div class="header-contents">
-                <h1><br><br><span>Contact</span></h1>
-            </div>
+</section>
 
+<section id="portfolio">
+    <div class="header-contents">
+        <h1>Portfolio</h1>
+    </div>
+    <div class="container">
+        <div class="row" onclick="bazaFilmow()">
+            <div class="portfolio-col-2">
+                <h2 class="link">GitHub Link</h2>
+                <h1>Film Base</h1>
+                <p>Project created in C# in the MVVM architecture. The database of films is imported into the application, and then the user can filter the displayed elements by genre, title, etc. Additionally, he can give his own rating and mark the viewing, which is saved directly to the database.</p>
+            </div>
+            <div class="portfolio-col-1">
+                <img src="images/bazaFilmow.png" alt="Film Base">
+            </div>
+        </div>
+
+        <div class="row" onclick="quiz()">
+            <div class="portfolio-col-2">
+                <h2 class="link">GitHub Link</h2>
+                <h1>Quiz</h1>
+                <p>Project created in C# in the MVVM architecture. The coded database of questions and correct answers is imported into the application. Then the user can choose from the list which quiz he wants to solve. When he presses start, time starts to fly and the user has to select the correct answers. At the end, the result achieved by the user appears.</p>
+            </div>
+            <div class="portfolio-col-1">
+                <img src="images/quiz.png" alt="Quiz">
+            </div>
+        </div>
+
+        <div class="row" onclick="godot()">
+            <div class="portfolio-col-2">
+                <h2 class="link">GitHub Link</h2>
+                <h1>Game Civilization 2077</h1>
+                <p>A turn-based strategy game created by a 3-person team in Godot using GDScript as a school project. The player builds special buildings on a hexagonal board and recruits robots. Robots can fight each other and destroy buildings. When one of the capitals falls, the game ends.</p>
+            </div>
+            <div class="portfolio-col-1">
+                <img src="images/cywilizacja2.png" alt="Civilization 2077">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portfolio-col-2">
+                <h1>Piano Player</h1>
+                <p>A rather long animation of a character playing the piano, which I made over the holidays as a hobby and experimentally. Thanks to this animation, I gained film and programming experience.</p>
+            </div>
+            <div class="portfolio-col-1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jr2E6dppF-w?si=xJdw5gM5Uqk1QsE3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portfolio-col-2">
+                <h1>Game Advertisement</h1>
+                <p>The first animation of this type on my part, so it has not been refined. Here, first of all, I wanted to present the possibilities at my disposal (procedural hourglass, disintegrating and flying cards, animation of points). I generated the background and a few cards using AI for illustration purposes only.</p>
+            </div>
+            <div class="portfolio-col-1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Cghst2Bv76M?si=_m3VUJdiRJhfzyQv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
+</section>
 
+<section id="skills">
+    <div class="header-contents">
+        <h1>Skills</h1>
+    </div>
+    <div class="row-skills">
+        <div class="column-skills">
+            <img src="images/godot.webp" alt="Godot" width="100">
+            <h1>GDScript</h1>
+        </div>
+        <div class="column-skills">
+            <img src="images/Python.png" alt="Python" width="100">
+            <h1>Python</h1>
+        </div>
+        <div class="column-skills">
+            <img src="images/Android.png" alt="Kotlin" width="100">
+            <h1>Kotlin</h1>
+        </div>
+        <div class="column-skills">
+            <img src="images/unity.png" alt="Unity" width="100">
+            <h1>C#</h1>
+        </div>
+        <div class="column-skills">
+            <img src="images/Blender.png" alt="Blender" width="100">
+            <h1>Blender</h1>
+        </div>
+    </div>
+</section>
 
+<section id="contact">
+    <div class="header-contents">
+        <h1>Contact</h1>
+    </div>
+</section>
 
-    <script>
-//Links
+<script>
         function godot() {
             var url = "https://github.com/JanP1/ProjektInzynieriaOprogramowania";
             window.location.href = url;
-            //window.open(url, "_blank");
         }
         function bazaFilmow() {
             var url = "https://github.com/Konrad6666/ProjektBazaFilmow";
             window.location.href = url;
-            //window.open(url, "_blank");
         }
         function quiz() {
             var url = "https://github.com/Konrad6666/QuizSolving";
             window.location.href = url;
-            //window.open(url, "_blank");
         }
-        function godot_over() {
-            document.body.style.cursor = 'pointer';
-            //window.open(url, "_blank");
-        }
-        function godot_out() {
-            document.body.style.cursor = 'default';
-            //window.open(url, "_blank");
-        }
-        function godot() {
-            var url = "https://github.com/JanP1/ProjektInzynieriaOprogramowania";
-            window.location.href = url;
-            //window.open(url, "_blank");
-        }
-
-//Slider-video
-        const btns=document.querySelectorAll(".nav-btn")
-        const slides=document.querySelectorAll(".video-slider")
-
+        const btns=document.querySelectorAll('.nav-btn');
+        const slides=document.querySelectorAll('.video-slider');
         var sliderNav=function(manual){
-            btns.forEach((btn)=>{
-                btn.classList.remove('active')
-            })
-            slides.forEach((slide)=>{
-                slide.classList.remove('active')
-            })
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
+            btns.forEach(btn=>btn.classList.remove('active'));
+            slides.forEach(slide=>slide.classList.remove('active'));
+            btns[manual].classList.add('active');
+            slides[manual].classList.add('active');
         }
-        var time=30000
-        let interval
-        interval=setInterval(sliding, time);
-        let interval2
+        var time=30000;
+        let interval=setInterval(sliding,time);
+        let interval2;
         btns.forEach((btn,i)=>{
-            btn.addEventListener("click",()=>{
-                sliderNav(i)
-                // clearInterval(interval);
-                // interval=setInterval(sliding, time);
+            btn.addEventListener('click',()=>{
+                sliderNav(i);
                 clearInterval(interval);
-                // clearInterval(interval2);
-                interval2=setTimeout(function(){
-                    // clearInterval(interval);
-                    interval=setInterval(sliding, time);
-                }, 10000);
-
+                interval2=setTimeout(()=>{
+                    interval=setInterval(sliding,time);
+                },10000);
             });
         });
-//Auto Slider-video
         function sliding(){
             var count=0;
             var count_active=0;
-            btns.forEach((btn)=>{
+            btns.forEach(btn=>{
                 count+=1;
-                if (btn.classList.contains('active')){
-                    btn.classList.remove('active')
-                    document.getElementById('video'+count).classList.remove('active')
-                    count_active=count
+                if(btn.classList.contains('active')){
+                    btn.classList.remove('active');
+                    document.getElementById('video'+count).classList.remove('active');
+                    count_active=count;
                 }
-            })
-            if (count_active>4){
-                count_active=0
+            });
+            if(count_active>4){
+                count_active=0;
             }
-            
-            document.getElementById('video'+(count_active+1)).classList.add('active')
-            document.getElementById('nav-btn'+(count_active+1)).classList.add('active')
-            console.log(count)
+            document.getElementById('video'+(count_active+1)).classList.add('active');
+            document.getElementById('nav-btn'+(count_active+1)).classList.add('active');
         }
-
-//Backlight after scrolling
-        let hoveredElement = null;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const scrollContainer = document.querySelector('.scroll-container');
-            // You can pass a scrolling container or `document` here:
-            addHoverListeners(scrollContainer, hover);
-        });
-
-        function hover(targetElement) {
-            if (hoveredElement === targetElement) {
-                return;
-            }
-
-            if (hoveredElement) {
-                hoveredElement.classList.remove('hover');
-            }
-
-            hoveredElement = targetElement;
-            hoveredElement.classList.add('hover');
-        }
-
-        /**
-         * Attaches the necessary event listeners for hovering.
-         *
-         * @param {EventTarget} scrollContainer The `Element` or `document`
-         * whose scroll events should be listened to.
-         * @param {EventListener|Function} hover A callback function or an
-         * object that implements `EventListener`
-         */
-        function addHoverListeners(scrollContainer, hover) {
-            let mouseX, mouseY;
-
-            document.addEventListener('mousemove', event => {
-                mouseX = event.clientX;
-                mouseY = event.clientY;
-
-                hover(event.target);
-            }, { passive: true });
-
-            scrollContainer.addEventListener('scroll', debounce(() => {
-                const hoverTarget = document.elementFromPoint(mouseX, mouseY);
-                if (hoverTarget) {
-                    hover(hoverTarget);
-                }
-            }, 25), { passive: true });
-        }
-
-        /**
-         * Returns a function, that, as long as it continues to be invoked, will not
-         * be triggered. The function will be called after it stops being called for
-         * N milliseconds. If `immediate` is passed, trigger the function on the
-         * leading edge, instead of the trailing.
-         *
-         * @see https://davidwalsh.name/javascript-debounce-function
-         * @param {Function} func
-         * @param {Number} wait
-         * @param {Boolean?} immediate
-         * @returns {Function}
-         */
-        function debounce(func, wait, immediate = false) {
-            let timeout;
-
-            return function () {
-                const context = this, args = arguments;
-                const later = function () {
-                    timeout = null;
-                    if (!immediate) {
-                        func.apply(context, args);
-                    }
-                };
-
-                const callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-
-                if (callNow) {
-                    func.apply(context, args);
-                }
-            };
-        };
     </script>
 </body>
-
 </html>
